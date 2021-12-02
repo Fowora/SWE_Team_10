@@ -4,12 +4,21 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from 'react-router-dom';
+import {createStore,combineReducers} from 'redux';
+import pageNameChangerReducer from './redux_reducers/pageNameChanger';
+import {Provider} from 'react-redux';
+
+const allReducers = combineReducers({pageName: pageNameChangerReducer})
+
+const store = createStore(allReducers);
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-    <App />
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
