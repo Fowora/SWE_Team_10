@@ -1,8 +1,12 @@
 .App{
-  position:relative;
-  width: auto;
-  height:auto;
-  min-height: 100vh;
-  background-size:auto;
+  position:absolute;
+  display:block;
+  box-orient: horizontal;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
   background: #000B20;
+}
+.spacer{
+  padding-top:5%;
 }

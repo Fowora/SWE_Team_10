@@ -6,6 +6,7 @@ import {useDispatch} from 'react-redux';
 const AllQuizzes = () =>{
     const dispatch = useDispatch(); // Makes dispatch more readable
     dispatch(nameChange('All Quizzes')); //Calls the reducer to change the name of the page to Home
+    
     return(
     <div>All Quizes Page WIP</div>
     )

@@ -1,7 +1,20 @@
 .navbar{
-    min-height: 20%;
-    background-color:#557ADA;
+    position:absolute;
+    width: 100%;
+    background-color: #557ADA;
+    font-size: 72px;
 }
 .pageName{
     color:white;
+}
+.ONav{
+    background-color: #2D39A3;
+}
+.HNavIcon{
+    color:white;
+}
+.loginButton{
+    color:white;
+    font-size: 72px;
+    left:10%;
 }

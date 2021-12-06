@@ -2,23 +2,26 @@ import './HomePage.css';
 import {nameChange} from '../actions/Action.js';
 import {useDispatch} from 'react-redux';
 import pic from '../Images/KCLogo.jpg'
+import {useNavigate} from 'react-router';
 //imports
+
+
+
 
 const HomePage = () =>{
     const dispatch = useDispatch(); // Makes dispatch more readable
     dispatch(nameChange('Home Page')) //Calls the reducer to change the name of the page to Home
+
+    let navigate = useNavigate();
+
     return(
-    <div class = 'flex-container'>
+    <div class="container-fluid" id= 'HPContainer'>
         <div className = 'Knowledge_Check'>Knowledge Check</div>
-        <div className='MainPageContents'>
+        <div className>
             <div><img class = 'KCLogoPic'src={pic} /></div>
             <div className="Ovals">
-                <span className= "selectionOval1">
-                    <span className= 'ovalText'>Go To Quizzes</span>
-                </span>
-                <span className= "selectionOval2">
-                    <span className= 'ovalText'>CreateQuizzess</span>
-                </span>
+                <button className= "selectionOval1" onClick={() => navigate('/AllQuizzes')} >Go To Quizzes</button>
+                <button className= "selectionOval2" onClick={() => navigate('/CreateAQuiz')}>Create Quizzes</button>
             </div>
         </div>
     </div>
