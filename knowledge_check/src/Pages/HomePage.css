@@ -1,52 +1,60 @@
-.HomePage{
-    height:auto;
-    width:auto;
+.HPContainer{
     position:absolute;
-    white-space: nowrap;
+    min-width: 1000px;
+    max-width: 1000px;
+    min-height: 1000px;
+    max-height: 1000px;
+    padding-top:100px;
+    overflow:hidden;
+    display:flex;
+    justify-content: center;
 }
 .Knowledge_Check{
-    padding-top: 56px;
+    padding-top: 100px;
     font-family: Montserrat;
+    position: relative;
     font-style: normal;
     font-weight: bold;
     font-size: 100px;
     line-height: 24px;
+    white-space: nowrap;
+    width: 400px;
+    height: 100px;
+    margin:0 auto;
     text-align: center;
     color:#557ADA;
+    display: block;
 }
-.KCLogoPic{
-    position: relative;
-    padding-top: 10%;
-    width: auto;
-    height: auto;
+.KCLogoPic{  
+    display: block;
+    margin:0 auto;
+    width: 312px;
+    height: 300px;
 }
 .selectionOval1{
-    width: 200px;
+    width: 300px;
     height: 100px;
-    top:5%;
-    border-radius:50px;
     position:relative;
+    font-size: 32px;
+    border-radius:50px;
+    color:white;
+    margin:0 auto;
+    display: inline;
     background-color:#557ADA ;
 }
 .selectionOval2{
-    width: 400px;
-    height: 400px;
-    border-radius:50px;
+    width: 300px;
+    height: 100px;
     position:relative;
     left: 20%;
-    bottom: 75%;
+    font-size: 32px;
+    border-radius:50px;
+    color:white;
+    justify-content: center;
+    left:20%;
+    display:inline;
     background-color:#557ADA ;
 }
-.ovalText{
-    font-size:40px;
-    position: relative;
-    text-align: center;
-    color:#E3F6F8;
-}
-.MainPageContents{
-    text-align:center;
-    left: 50%;
-}
 .Ovals{
-    padding-top:30%;
+    padding-top: 50px;
 }

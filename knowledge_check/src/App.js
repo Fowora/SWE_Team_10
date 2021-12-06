@@ -11,6 +11,7 @@ function App() {
   return (
     <div className = 'App'>
       <NavBar />
+      <div className="spacer"></div>
       <Routes>
          <Route path="/Home" element={<HomePage />} />
          <Route path="/UserProfile" element= {<UserProfile />} />

@@ -1,35 +1,46 @@
 import Navbar from 'react-bootstrap/Navbar';
 import './NavBar.css';
 import {GiHamburgerMenu} from 'react-icons/gi';
-import { Nav, Container, Offcanvas } from 'react-bootstrap';
+import {Container, Offcanvas } from 'react-bootstrap';
 import {useSelector} from 'react-redux';
-import { Route } from 'react-router-dom'
 import  {useNavigate} from 'react-router-dom';
+import {useState} from 'react';
+
 
 const NavBar = (props)=> { 
-    const pageName = useSelector(state => state.pageName )
+    const pageName = useSelector(state => state.pageName );
+
+    const [show, setShow] = useState(false);
 
     let navigate = useNavigate();
 
-    const handleClickHome = () =>{
-        navigate('/home');
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+    const showOffCanvas = () =>{
+        <offCanvasKC placement = "start" />
     }
+
     return(
         <div> 
-            <Navbar classname="navbar" bg = "dark" expand={false}>  
+            <Navbar classname="navbar navbar-expand-lg" bg = "dark" expand={false}>  
                 <Container fluid>  
-                <Navbar.Toggle as={GiHamburgerMenu} aria-controls />
-                    <Navbar.Offcanvas id="offCanvas Navbar" aria-labelledby="OffcanvasNavbar" placement="end">
+                <Navbar.Toggle aria-controls="offcanvasNavbar" />
+                <span onclick={showOffCanvas} className="HNavIcon"><GiHamburgerMenu /></span>
+                <span className = "pageName"> {pageName} </span>
+                    <Navbar.Offcanvas className="ONav" id='offcanvasNavbar' aria-labelledby="offcanvasNavbar" placement= 'end'>
                         <Offcanvas.Header closeButton>
-                            <Offcanvas.Title id="offcanvasNavbarLabel">Knowledge Check</Offcanvas.Title>
+                            <Offcanvas.Title id="offcanvasnavbarLabel">Knowledge Check</Offcanvas.Title>
                         </Offcanvas.Header>
-                        <button onClick={() => navigate('/Home')}>Home</button>
-                        <button onClick={() => navigate('/AllQuizzes')}>All Quizzes</button>
-                        <button onClick={() => navigate('/CreateAQuiz')}>Create a Quiz</button>
-                        <button onClick={() => navigate('/UserProfile')}>User Profile</button>
+                        <Offcanvas.Body>
+                        <li className="NButtons" onClick={() => navigate('/AllQuizzes')}>Home</li>
+                        <li className="NButtons" onClick={() => navigate('/AllQuizzes')}>All Quizzes</li>
+                        <li className="NButtons" onClick={() => navigate('/CreateAQuiz')}>Create a Quiz</li>
+                        <li className="NButtons" onClick={() => navigate('/UserProfile')}>User Profile</li>
+                        </Offcanvas.Body>
                     </Navbar.Offcanvas>  
+                    <span class="loginButton ms-auto">Login</span>
                 </Container>
-               <div className = "pageName">{pageName}</div>
             </Navbar> 
         </div> 
     )// Route change not working yet smh
