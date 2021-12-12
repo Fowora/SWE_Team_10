@@ -2,14 +2,24 @@ import './App.css';
 import {NavBar} from './Components/NavBar.js';
 import HomePage from './Pages/HomePage.js';
 import UserProfile from './Pages/UserProfile.js';
+import React, { useState, useEffect } from 'react';
 import {Routes, Route, Navigate} from 'react-router-dom';
 import AllQuizzes from './Pages/AllQuizzes.js';
 import CreateAQuiz from './Pages/CreateAQuiz.js';
 import TakingAQuiz from './Pages/TakingAQuiz.js';
+import LoginButton from './LoginButton.js';
 
 function App() {
-  return (
-    <div className = 'App'>
+    const [user, setUser] = useState(null);
+
+    return (
+  <div className="App">
+      <header className="App-header">
+          <LoginButton setUser={(user) => setUser(user)}/>
+          {user != null &&
+          <p>Welcome, {user.displayName} ({user.email})</p>
+          }
+      </header>
       <NavBar />
       <div className="spacer"></div>
       <Routes>
