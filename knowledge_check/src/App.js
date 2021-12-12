@@ -3,9 +3,17 @@ import './App.css';
 import {authentication} from "./firebase-config";
 import {signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import React, {useState} from "react";
+import {NavBar} from './Components/NavBar.js';
+import HomePage from './Pages/HomePage.js';
+import UserProfile from './Pages/UserProfile.js';
+import {Routes, Route, Navigate} from 'react-router-dom';
+import AllQuizzes from './Pages/AllQuizzes.js';
+import CreateAQuiz from './Pages/CreateAQuiz.js';
+import TakingAQuiz from './Pages/TakingAQuiz.js';
+import SignIn from './Pages/SignIn.js';
+import LoginButton from './LoginButton.js';
 
 function App() {
-
     const signInWithGoogle = () => {
         const provider = new GoogleAuthProvider();
         signInWithPopup(authentication,provider)
@@ -16,15 +24,22 @@ function App() {
                 console.log(err)
             })
     }
+
     return (
         <div className="App">
-            <button onClick={signInWithGoogle}>
+           <center><button onClick={signInWithGoogle}>
                 Sign In
-            </button>
+            </button></center>
 
-            <header className="App-header">
-                {/*<img src={logo} className="App-logo" alt="logo" />*/}
-            </header>
+            <div className="spacer"></div>
+            <Routes>
+                <Route path="/Home" element={<HomePage />} />
+                <Route path="/UserProfile" element= {<UserProfile />} />
+                <Route path="/TakingAQuiz" element={<TakingAQuiz />} />
+                <Route path="/AllQuizzes" element= {<AllQuizzes />} />
+                <Route path="/CreateAQuiz" element= {<CreateAQuiz />} />
+                <Route path="*" element={<Navigate exact from ="/" replace to="/Home" />}/>
+            </Routes>
         </div>
     );
 }

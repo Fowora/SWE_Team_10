@@ -1,23 +1,28 @@
 import React from 'react';
-import firebase from 'firebase/compat/app';
+import {GoogleAuthProvider, signInWithPopup} from "firebase/auth";
+import {authentication} from "./firebase-config";
 
-function LoginButton({setUser}) {
+// function LoginButton({setUser}) {
+function LoginButton() {
 
-    function logIn() {
-        var provider = new firebase.auth.GoogleAuthProvider();
-        firebase.auth().signInWithPopup(provider).then(function(result) {
-            console.log(result.user);
-            setUser(result.user);
-        }).catch(function(error) {
-            console.log(error);
-        });
+    const signInWithGoogle = () => {
+        const provider = new GoogleAuthProvider();
+        signInWithPopup(authentication,provider)
+            .then((re)=>{
+                console.log(re)
+            })
+            .catch((err)=>{
+                console.log(err)
+            })
     }
 
     return (
-        <button onClick={() => logIn()}>
-            Login
+       <button onClick={signInWithGoogle}>
+            Sign In
         </button>
     );
+
 }
 
 export default LoginButton;
+
