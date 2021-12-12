@@ -1,10 +1,10 @@
 import Navbar from 'react-bootstrap/Navbar';
 import './NavBar.css';
 import {GiHamburgerMenu} from 'react-icons/gi';
-import {Container, Offcanvas } from 'react-bootstrap';
 import {useSelector} from 'react-redux';
 import  {useNavigate} from 'react-router-dom';
 import {useState} from 'react';
+import {Container, Offcanvas } from 'react-bootstrap';
 
 
 const NavBar = (props)=> { 
@@ -25,12 +25,11 @@ const NavBar = (props)=> {
         <div> 
             <Navbar classname="navbar navbar-expand-lg" bg = "dark" expand={false}>  
                 <Container fluid>  
-                <Navbar.Toggle aria-controls="offcanvasNavbar" />
-                <span onclick={showOffCanvas} className="HNavIcon"><GiHamburgerMenu /></span>
+                <Navbar.Toggle as={GiHamburgerMenu} aria-controls />
                 <span className = "pageName"> {pageName} </span>
-                    <Navbar.Offcanvas className="ONav" id='offcanvasNavbar' aria-labelledby="offcanvasNavbar" placement= 'end'>
+                    <Navbar.Offcanvas className="ONav" id='offCanvas Navbar' aria-labelledby="offcanvasNavbar" placement='start'>
                         <Offcanvas.Header closeButton>
-                            <Offcanvas.Title id="offcanvasnavbarLabel">Knowledge Check</Offcanvas.Title>
+                            <Offcanvas.Title id="offcanvasNavbarLabel">Knowledge Check</Offcanvas.Title>
                         </Offcanvas.Header>
                         <Offcanvas.Body>
                         <li className="NButtons" onClick={() => navigate('/AllQuizzes')}>Home</li>
