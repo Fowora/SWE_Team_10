@@ -18,13 +18,13 @@
     font-size: 100px;
     line-height: 24px;
     white-space: nowrap;
-    width: 400px;
     height: 100px;
     margin:0 auto;
     text-align: center;
-    color:#557ADA;
+    color: #fffefe;
     display: block;
 }
+
 .KCLogoPic{  
     display: block;
     margin:0 auto;
@@ -40,7 +40,7 @@
     color:white;
     margin:0 auto;
     display: inline;
-    background-color:#557ADA ;
+    background-color:#1548cc ;
 }
 .selectionOval2{
     width: 300px;
@@ -51,10 +51,13 @@
     border-radius:50px;
     color:white;
     justify-content: center;
-    left:20%;
     display:inline;
-    background-color:#557ADA ;
+    background-color: #1548cc;
+
 }
 .Ovals{
     padding-top: 50px;
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 30%
 }
