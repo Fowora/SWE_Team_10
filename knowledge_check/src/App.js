@@ -10,8 +10,7 @@ import {Routes, Route, Navigate} from 'react-router-dom';
 import AllQuizzes from './Pages/AllQuizzes.js';
 import CreateAQuiz from './Pages/CreateAQuiz.js';
 import TakingAQuiz from './Pages/TakingAQuiz.js';
-import SignIn from './Pages/SignIn.js';
-import LoginButton from './LoginButton.js';
+
 
 function App() {
     const signInWithGoogle = () => {
