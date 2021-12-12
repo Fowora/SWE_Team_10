@@ -1,0 +1,25 @@
+.AllQText{
+    color:white;
+    font-size: 72px;
+}
+.outerQuizRectangle{
+    display: grid;
+    grid-template-columns: 700 px 1 fr;
+    width: 600px;
+    height: 200px;
+    border-radius:50px;
+    color:white;
+    background-color:#5200FF;
+}
+.quizContentText{
+    position: relative;
+    display: inline-block;
+    color:white;
+    font-size: 32px;
+}
+.quizQNums{
+    position:relative;
+    justify-content: right;
+    color:white;
+    font-size: 32px;
+}
