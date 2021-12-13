@@ -4,8 +4,7 @@ import {GiHamburgerMenu} from 'react-icons/gi';
 import {useSelector} from 'react-redux';
 import  {useNavigate} from 'react-router-dom';
 import {useState} from 'react';
-import {Container, Offcanvas } from 'react-bootstrap';
-
+import {Container, Offcanvas, Nav, NavDropdown, Form, FormControl, Button} from 'react-bootstrap';
 
 const NavBar = (props)=> { 
     const pageName = useSelector(state => state.pageName );
@@ -23,7 +22,49 @@ const NavBar = (props)=> {
 
     return(
         <div> 
-            <Navbar classname="navbar navbar-expand-lg" bg = "dark" expand={false}>  
+
+<Navbar bg="light" expand={true}>
+  <Container fluid>
+    <Navbar.Toggle as={GiHamburgerMenu} aria-controls="OffCanvasNavbar" toggleNavKey= {1} />
+    <span className="pageName">{pageName}</span>
+    <Navbar.Offcanvas
+      id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel"
+      placement="end"
+    >
+      <Offcanvas.Header closeButton>
+        <Offcanvas.Title id="offcanvasNavbarLabel">Offcanvas</Offcanvas.Title>
+      </Offcanvas.Header>
+      <Offcanvas.Body key = {1}>
+        <Nav className="justify-content-end flex-grow-1 pe-3">
+          <Nav.Link href="#action1">Home</Nav.Link>
+          <Nav.Link href="#action2">Link</Nav.Link>
+          <NavDropdown title="Dropdown" id="offcanvasNavbarDropdown">
+            <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+            <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
+            <NavDropdown.Divider />
+            <NavDropdown.Item href="#action5">
+              Something else here
+            </NavDropdown.Item>
+          </NavDropdown>
+        </Nav>
+        <Form className="d-flex">
+          <FormControl
+            type="search"
+            placeholder="Search"
+            className="me-2"
+            aria-label="Search"
+          />
+          <Button variant="outline-success">Search</Button>
+        </Form>
+      </Offcanvas.Body>
+    </Navbar.Offcanvas>
+  </Container>
+</Navbar>
+
+
+
+            {/* <Navbar classname="navbar navbar-expand-lg" bg = "dark" expand={false}>  
                 <Container fluid>  
                 <Navbar.Toggle as={GiHamburgerMenu} aria-controls />
                 <span className = "pageName"> {pageName} </span>
@@ -40,7 +81,7 @@ const NavBar = (props)=> {
                     </Navbar.Offcanvas>  
                     <span class="loginButton ms-auto">Login</span>
                 </Container>
-            </Navbar> 
+            </Navbar>  */}
         </div> 
     )// Route change not working yet smh
 }
