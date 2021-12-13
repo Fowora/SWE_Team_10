@@ -46,14 +46,17 @@ const CreateAQuiz = () =>{
     }, []);
 
     return (
-        <div className="CreateQuiz">          
-            <input 
+        <div className="CreateQuiz"> 
+        <div className="Qbox">
+        <div >
+        <input 
                 className="QInputs"
                 placeholder="Question..."
                 onChange={(event) => {
                     setQuestion(event.target.value);
                 }}
             />
+            </div>         
             <br/><input
             className="QInputs"
             placeholder="Correct Answer"
@@ -85,7 +88,8 @@ const CreateAQuiz = () =>{
                 setChoice4(event.target.value);
             }}
         />
-            <br/><button onClick={createUser}> Save Question</button>
+            <br/><button className="button" onClick={createUser}> Save Question</button>
+            </div>
             
             {users.map((user) => {
                 return (
