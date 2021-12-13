@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import logo from './logo.png';
 import './App.css';
 import {authentication} from "./firebase-config";
 import {signInWithPopup, GoogleAuthProvider } from "firebase/auth";
@@ -13,7 +13,7 @@ import TakingAQuiz from './Pages/TakingAQuiz.js';
 
 
 function App() {
-    
+
     return (
         <div className="App">
             <NavBar />
