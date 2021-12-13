@@ -46,48 +46,50 @@ const CreateAQuiz = () =>{
     }, []);
 
     return (
-        <div className="App">
-            <input
+        <div className="CreateQuiz">          
+            <input 
+                className="QInputs"
                 placeholder="Question..."
                 onChange={(event) => {
                     setQuestion(event.target.value);
                 }}
             />
             <br/><input
+            className="QInputs"
             placeholder="Correct Answer"
             onChange={(event) => {
                 setCorrectAnswer(event.target.value);
             }}
         />
-            <br/><input
+            <br/><input  className="QInputs"
             placeholder="Choice 1"
             onChange={(event) => {
                 setChoice1(event.target.value);
             }}
         />
-            <br/><input
+            <br/><input  className="QInputs"
             placeholder="Choice 2"
             onChange={(event) => {
                 setChoice2(event.target.value);
             }}
         />
-            <br/><input
+            <br/><input  className="QInputs"
             placeholder="Choice 3"
             onChange={(event) => {
                 setChoice3(event.target.value);
             }}
         />
-            <br/><input
+            <br/><input  className="QInputs"
             placeholder="Choice 4"
             onChange={(event) => {
                 setChoice4(event.target.value);
             }}
         />
             <br/><button onClick={createUser}> Save Question</button>
-
+            
             {users.map((user) => {
                 return (
-                    <div>
+                    <div className="Questions">
                         {" "}
                         <h1>Question: {user.question}</h1>
                         <h2>A: {user.answers[0]}</h2>

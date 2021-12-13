@@ -12,7 +12,7 @@ const IsLoggedIn = (props) =>{
     if (loggedIn){
         return(
             <div className="Ovals">
-                <button className= "selectionOval1" onClick={() => navigate('/AllQuizzes')} >Go To Quizzes</button>
+                <button className= "selectionOval2" onClick={() => navigate('/AllQuizzes')} >Go To Quizzes</button>
                 <button className= "selectionOval2" onClick={() => navigate('/CreateAQuiz')}>Create Quizzes</button>
             </div>
         )
