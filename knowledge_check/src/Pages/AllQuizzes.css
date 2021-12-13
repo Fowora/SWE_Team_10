@@ -1,8 +1,14 @@
 .AllQText{
+    margin-top: 50px;
+    margin-left: 25px;
     color:white;
     font-size: 72px;
 }
 .outerQuizRectangle{
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-top: 20px;
     display: grid;
     grid-template-columns: 700 px 1 fr;
     width: 600px;
@@ -12,12 +18,14 @@
     background-color:#5200FF;
 }
 .quizContentText{
+    text-align: center;
     position: relative;
     display: inline-block;
     color:white;
     font-size: 32px;
 }
 .quizQNums{
+    text-align: center;
     position:relative;
     justify-content: right;
     color:white;

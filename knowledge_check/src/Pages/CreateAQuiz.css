@@ -1,0 +1,23 @@
+.CreateQuiz{
+    margin: 10%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: 700 px 1 fr;    
+    border-radius:50px;
+    color:white;
+    background-color:#5200FF;
+    padding: 5%;
+
+}
+
+.QInputs{
+  margin: auto; 
+  background-color: #5200FF;
+  color: white;
+}
+
+.Questions{
+    color: yellow;    
+}
