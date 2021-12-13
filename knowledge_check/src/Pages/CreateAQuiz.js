@@ -9,7 +9,7 @@ import {
     doc,
 } from "firebase/firestore";
 
-function App() {
+function CreateAQuiz() {
 
     const [newQuestion, setQuestion] = useState([""]);
     const [correctAnswer, setCorrectAnswer] = useState("");
@@ -104,4 +104,5 @@ function App() {
     );
 }
 
-export default App;
+
+export default CreateAQuiz;

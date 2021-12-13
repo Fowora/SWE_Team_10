@@ -13,22 +13,15 @@ import TakingAQuiz from './Pages/TakingAQuiz.js';
 
 
 function App() {
-    const signInWithGoogle = () => {
-        const provider = new GoogleAuthProvider();
-        signInWithPopup(authentication,provider)
-            .then((re)=>{
-                console.log(re)
-            })
-            .catch((err)=>{
-                console.log(err)
-            })
-    }
-
+    
     return (
         <div className="App">
-            <center><button onClick={signInWithGoogle}>
+            <NavBar />
+
+           {/* <center><button onClick={signInWithGoogle}>
+>>>>>>> Stashed changes
                 Sign In
-            </button></center>
+            </button></center> */}
 
             <div className="spacer"></div>
             <Routes>
