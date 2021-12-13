@@ -8,8 +8,12 @@ import {
     deleteDoc,
     doc,
 } from "firebase/firestore";
+import {useDispatch} from "react-redux";
+import {nameChange} from "../actions/Action";
 
-function CreateAQuiz() {
+const CreateAQuiz = () =>{
+    const dispatch = useDispatch(); // Makes dispatch more readable
+    dispatch(nameChange('Create a Quiz')); //Calls the reducer to change the name of the page to Home
 
     const [newQuestion, setQuestion] = useState([""]);
     const [correctAnswer, setCorrectAnswer] = useState("");
