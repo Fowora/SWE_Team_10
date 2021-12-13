@@ -26,7 +26,7 @@ function App() {
 
     return (
         <div className="App">
-           <center><button onClick={signInWithGoogle}>
+            <center><button onClick={signInWithGoogle}>
                 Sign In
             </button></center>
 
