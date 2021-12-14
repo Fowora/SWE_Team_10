@@ -1,0 +1,66 @@
+.HPContainer{
+    position:absolute;
+    min-width: 1000px;
+    max-width: 1000px;
+    min-height: 1000px;
+    max-height: 1000px;
+    padding-top:100px;
+    overflow:hidden;
+    display:flex;
+    justify-content: center;
+    background: #1d50b2;
+
+}
+.Knowledge_Check{
+    padding-top: 10px;
+    font-family: Montserrat;
+    position: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 24px;
+    white-space: nowrap;
+    height: 100px;
+    margin:0 auto;
+    color: #070707;
+    display: block;
+}
+
+.KCLogoPic{
+    display: block;
+    margin:0 auto;
+    width: 312px;
+    height: 300px;
+}
+.selectionOval1{
+    width: 300px;
+    height: 100px;
+    font-size: 32px;
+    border-radius:50px;
+    justify-content: center;
+    color:white;
+    display: inline;
+    background-color:#1548cc ;
+}
+.selectionOval2{
+    width: 300px;
+    height: 100px;
+    left: 20%;
+    font-size: 32px;
+    border-radius:50px;
+    color:white;
+    justify-content: center;
+    display:inline;
+    background-color: #1548cc;
+   margin-left: 10%;
+   margin-right: 10%;
+}
+.Ovals{
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.LogInText{
+    color:white;
+    font-size: 72px;
+}
