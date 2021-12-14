@@ -11,6 +11,16 @@ import {
 import {useDispatch} from "react-redux";
 import {nameChange} from "../actions/Action";
 
+
+/*
+Quiz{
+    name: X's Quiz
+    Question[]{
+        answers[]
+        correctAnswer = int
+    }
+}
+ */
 const CreateAQuiz = () =>{
     const dispatch = useDispatch(); // Makes dispatch more readable
     dispatch(nameChange('Create a Quiz')); //Calls the reducer to change the name of the page to Home
